@@ -1,0 +1,79 @@
+/* Mobile layout */
+body {
+    margin: 0;
+    background-color: rgb(248, 215, 171);
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+header {
+    background-color: brown;
+    padding: 1rem;
+}
+
+/* Navigation using Flexbox */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+a {
+    color: rgba(87, 3, 3, 0.767);
+}
+
+/* Content cards using Flexbox */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    background-color: burlywood;
+    padding: 1rem;
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: brown;
+    padding: 1rem;
+}
+
+/* Larger screens */
+@media (min-width: 60rem) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+        grid-column: span 2;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    section {
+        flex: 1;
+        padding: 2rem;
+    }
+}
